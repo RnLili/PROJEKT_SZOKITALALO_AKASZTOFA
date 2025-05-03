@@ -1,4 +1,4 @@
-﻿namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH.Data
+﻿namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH.BACKEND.Data
 {
     public class WordRepository : IWordRepository
     {
@@ -11,13 +11,13 @@
 
         public IEnumerable<string> Read()
         {
-            return this.Words;
+            return Words;
         }
         public string ReadRandom()
         {
             Random rnd = new Random();
-            int wordNum = rnd.Next(this.Words.Count);
-            return this.Words[wordNum];
+            int wordNum = rnd.Next(Words.Count);
+            return Words[wordNum];
         }
     }
 }
