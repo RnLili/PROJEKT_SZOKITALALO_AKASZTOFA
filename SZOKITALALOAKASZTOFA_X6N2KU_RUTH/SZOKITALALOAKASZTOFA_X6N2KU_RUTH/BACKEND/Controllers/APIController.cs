@@ -9,9 +9,19 @@ namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH.BACKEND.Controllers
     {
         IWordRepository repo;
 
-        public APIController()
+        public APIController(IWordRepository repo)
         {
-
+            this.repo = repo;
+        }
+        [HttpGet]
+        public IEnumerable<string> GetWords()
+        {
+            return this.repo.Read();
+        }
+        [HttpGet]
+        public string GetRandomWord()
+        {
+            return this.repo.ReadRandom();
         }
     }
 }
