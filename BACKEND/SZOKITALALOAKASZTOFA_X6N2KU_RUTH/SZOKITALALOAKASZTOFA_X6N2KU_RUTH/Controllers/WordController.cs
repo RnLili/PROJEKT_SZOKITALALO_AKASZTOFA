@@ -13,15 +13,15 @@ namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH.Controllers
         {
             this.repo = repo;
         }
-        [HttpGet("Words")]
+        [HttpGet]
         public IEnumerable<string> GetWords()
         {
             return repo.Read();
         }
-        [HttpGet("RandomWord")]
-        public string GetRandomWord()
+        [HttpGet("GetRandomWord")]
+        public IActionResult GetRandomWord()
         {
-            return repo.ReadRandom();
+            return Ok(new { word = repo.ReadRandom() });
         }
     }
 }

@@ -11,6 +11,7 @@ namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH
             builder.Services.AddTransient<IWordRepository, WordRepository>();
             builder.Services.AddSwaggerGen();
             var app = builder.Build();
+            
             app.UseRouting();
             app.MapControllerRoute(
                 name: "default",
@@ -21,6 +22,11 @@ namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            
+            app.UseCors(x => x.AllowCredentials().AllowAnyMethod().AllowAnyHeader().WithOrigins("http://127.0.0.1:5500"));
+
+
             app.Run();
         }
     }
