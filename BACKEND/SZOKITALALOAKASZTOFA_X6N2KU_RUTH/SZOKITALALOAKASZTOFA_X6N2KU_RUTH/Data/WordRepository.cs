@@ -1,4 +1,4 @@
-﻿namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH.BACKEND.Data
+﻿namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH.Data
 {
     public class WordRepository : IWordRepository
     {
