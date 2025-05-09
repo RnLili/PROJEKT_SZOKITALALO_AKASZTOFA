@@ -19,5 +19,18 @@ async function download()
         
     }
 }
+document.getElementById("send").addEventListener("click", async () => {
+    let inputs = document.querySelectorAll("#inputs input");
+    let inputValues = [];
 
+    inputs.forEach(input => {
+        inputValues.push(input.value); 
+    });
+
+    let joined_inputs = {
+        word: inputValues.join("")
+    };
+    console.log(joined_inputs)
+    
+});
 download()
