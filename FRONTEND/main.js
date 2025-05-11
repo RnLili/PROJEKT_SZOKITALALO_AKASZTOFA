@@ -48,9 +48,10 @@ document.getElementById("send").addEventListener("click", async () => {
         if (differences[index] < 5) {
             output.setAttribute('class', 'badge text-bg-success')
         }
-        if (differences[index] >= 5 && differences[index] <= 10) {
+        else if (differences[index] >= 5 && differences[index] <= 10) {
             output.setAttribute('class', 'badge text-bg-warning')
-        } else {
+        }
+        else {
             output.setAttribute('class', 'badge text-bg-danger')
         }
         output.textContent += differences[index];

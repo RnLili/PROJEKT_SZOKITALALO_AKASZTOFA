@@ -6,7 +6,7 @@
 
         public WordRepository()
         {
-            Words = new List<string> { "macska", "laptop", "kutya", "mosógép", "orgona", "bögre", "nyuszi" };
+            Words = new List<string> { "macska", "laptop", "kutya", "oposszum", "orgona", "bolyhos", "nyuszi" , "csillag"};
         }
 
         public IEnumerable<string> Read()
