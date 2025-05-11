@@ -50,6 +50,10 @@ document.getElementById("send").addEventListener("click", async () => {
             counter += 1;
         }
     }
+    let correct_div = document.getElementById('percentage');
+    let correct = document.createElement('p');
+    correct = differences.length / counter
+    correct_div.appendChild(correct)
     
 
 });
