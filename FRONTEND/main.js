@@ -31,6 +31,14 @@ document.getElementById("send").addEventListener("click", async () => {
         word: inputValues.join("")
     };
     console.log(joined_inputs)
+    const response = await fetch("http://localhost:5278/word/check", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(joined_inputs)
+    });
+    let result = await response.json();
     
 });
 download()
