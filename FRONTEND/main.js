@@ -39,6 +39,18 @@ document.getElementById("send").addEventListener("click", async () => {
         body: JSON.stringify(joined_inputs)
     });
     let result = await response.json();
+    let container = document.getElementById('results');
+    const differences = result.differences;
+    let counter = 0;
+    for (let index = 0; index < differences.length; index++) {
+        let output = document.createElement('p');
+        output += differences[index];
+        container.appendChild(output);
+        if (differences[index] == 0) {
+            counter += 1;
+        }
+    }
     
+
 });
 download()
