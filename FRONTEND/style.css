@@ -19,3 +19,10 @@ h1{
     text-align: center;
     margin-top: 10px;
 }
+#results{
+    text-align: center;
+}
+.result{
+    margin-left: 8px;   
+    margin-right: 8px;
+}

@@ -43,8 +43,9 @@ document.getElementById("send").addEventListener("click", async () => {
     const differences = result.differences;
     let counter = 0;
     for (let index = 0; index < differences.length; index++) {
-        let output = document.createElement('p');
-        output += differences[index];
+        let output = document.createElement('span');
+        output.setAttribute('class', 'result')
+        output.textContent += differences[index];
         container.appendChild(output);
         if (differences[index] == 0) {
             counter += 1;
@@ -52,7 +53,7 @@ document.getElementById("send").addEventListener("click", async () => {
     }
     let correct_div = document.getElementById('percentage');
     let correct = document.createElement('p');
-    correct = differences.length / counter
+    correct.textContent = differences.length / counter
     correct_div.appendChild(correct)
     
 
