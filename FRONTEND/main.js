@@ -45,11 +45,20 @@ document.getElementById("send").addEventListener("click", async () => {
     for (let index = 0; index < differences.length; index++) {
         let output = document.createElement('span');
         output.setAttribute('class', 'result')
+        if (differences[index] < 5) {
+            output.setAttribute('class', 'badge text-bg-success')
+        }
+        if (differences[index] >= 5 && differences[index] <= 10) {
+            output.setAttribute('class', 'badge text-bg-warning')
+        } else {
+            output.setAttribute('class', 'badge text-bg-danger')
+        }
         output.textContent += differences[index];
         container.appendChild(output);
         if (differences[index] == 0) {
             counter += 1;
         }
+
     }
     let correct_div = document.getElementById('percentage');
     let correct = document.createElement('p');
