@@ -15,9 +15,22 @@ body{
 h1{
     text-align: center;
 }
-#send-btn{
+#send-btn-div{
     text-align: center;
     margin-top: 10px;
+    
+}
+#send-btn{
+    transition-duration: 0.4s;
+    width: 200px;
+    border-color: lightskyblue;
+    border-radius: 8px;
+    background-color: lightseagreen;
+    color: white;
+}
+#send-btn:hover{
+    background-color: lightskyblue;
+    color: white;
 }
 #results{
     text-align: center;

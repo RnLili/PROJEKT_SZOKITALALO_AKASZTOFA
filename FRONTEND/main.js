@@ -19,7 +19,7 @@ async function download()
         
     }
 }
-document.getElementById("send").addEventListener("click", async () => {
+document.getElementById("send-btn").addEventListener("click", async () => {
     let inputs = document.querySelectorAll("#inputs input");
     let inputValues = [];
 
@@ -63,7 +63,7 @@ document.getElementById("send").addEventListener("click", async () => {
     }
     let correct_div = document.getElementById('percentage');
     let correct = document.createElement('p');
-    correct.textContent = differences.length / counter
+    correct.textContent = counter / differences.length
     correct_div.appendChild(correct)
     
 
