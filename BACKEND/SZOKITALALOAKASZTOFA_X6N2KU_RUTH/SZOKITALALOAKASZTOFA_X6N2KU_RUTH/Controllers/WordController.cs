@@ -60,7 +60,7 @@ namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH.Controllers
 
             return Ok(new
             {
-                match = inputWord == refWord,
+                refWord,
                 differences
             });
         }

@@ -61,10 +61,22 @@ document.getElementById("send-btn").addEventListener("click", async () => {
         }
 
     }
+    
     let correct_div = document.getElementById('percentage');
     let correct = document.createElement('p');
-    correct.textContent = counter / differences.length
-    correct_div.appendChild(correct)
+    correct_num = Math.round((counter / differences.length)*100)
+    if (correct_num < 40) {
+        correct.setAttribute('class', 'badge text-bg-danger')
+    }
+    else if (differences[index] >= 40 && differences[index] <= 70) {
+        correct.setAttribute('class', 'badge text-bg-warning')
+    }
+    else {
+        correct.setAttribute('class', 'badge text-bg-success')
+    }
+    
+    correct.textContent = "A szó " + correct_num + "%-át találtad el";
+    correct_div.appendChild(correct);
     
 
 });
