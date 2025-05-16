@@ -61,7 +61,8 @@ namespace SZOKITALALOAKASZTOFA_X6N2KU_RUTH.Controllers
             return Ok(new
             {
                 refWord,
-                differences
+                differences,
+                inputWord
             });
         }
     }

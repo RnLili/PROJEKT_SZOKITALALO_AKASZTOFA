@@ -63,10 +63,15 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     }
     let refword = result.refWord
     let refword_div = document.getElementById('refword')
-    let refword_p = document.createElement('p')
-    refword_p.textContent = "Az eredeti szó" + refword + "volt"
+    let refword_p = document.createElement('h5')
+    refword_p.textContent = "Az eredeti szó: " + refword
     refword_div.appendChild(refword_p)
     console.log(refword)
+    let tipp = result.inputWord;
+    let tipp_div = document.getElementById('tipp')
+    let tipp_p = document.createElement('h5')
+    tipp_p.textContent = "A tippelt szó: " + tipp;
+    tipp_div.appendChild(tipp_p);
     let correct_div = document.getElementById('percentage');
     let correct = document.createElement('p');
     correct_num = Math.round((counter / differences.length)*100)
