@@ -61,14 +61,19 @@ document.getElementById("send-btn").addEventListener("click", async () => {
         }
 
     }
-    
+    let refword = result.refWord
+    let refword_div = document.getElementById('refword')
+    let refword_p = document.createElement('p')
+    refword_p.textContent = "Az eredeti szó" + refword + "volt"
+    refword_div.appendChild(refword_p)
+    console.log(refword)
     let correct_div = document.getElementById('percentage');
     let correct = document.createElement('p');
     correct_num = Math.round((counter / differences.length)*100)
     if (correct_num < 40) {
         correct.setAttribute('class', 'badge text-bg-danger')
     }
-    else if (differences[index] >= 40 && differences[index] <= 70) {
+    else if (correct_num >= 40 && correct_num <= 70) {
         correct.setAttribute('class', 'badge text-bg-warning')
     }
     else {
