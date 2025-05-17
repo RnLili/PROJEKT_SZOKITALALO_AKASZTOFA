@@ -6,6 +6,7 @@ body{
     margin: 8px;
     width: 40px;
     height: 40px;
+    border-color: darkorchid;
 }
 
 #inputs{
@@ -14,6 +15,8 @@ body{
 
 h1{
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
 }
 #send-btn-div{
     text-align: center;
@@ -23,20 +26,20 @@ h1{
 #send-btn{
     transition-duration: 0.4s;
     width: 200px;
-    border-color: lightskyblue;
+    border-color: plum;
     border-radius: 8px;
-    background-color: lightseagreen;
+    background-color: darkorchid;
     color: white;
 }
 #send-btn:hover{
-    background-color: lightskyblue;
+    background-color:orchid;
     color: white;
 }
 #results{
     text-align: center;
 }
-.result{
-    margin-left: 15px;   
+.badge{
+    margin-left: 15px;
     margin-right: 15px;
 }
 #percentage{
@@ -44,4 +47,27 @@ h1{
 }
 #refword{
     text-align: center;
+    border-radius: 25px;
+    background-color: plum;
+    color: white;
+    margin-left: 35%;
+    margin-right: 35%;
+    
+}
+#tipp{
+    text-align: center;
+    border-radius: 25px;
+    background-color:plum;
+    color: white;
+    margin-left: 35%;
+    margin-right: 35%;
+    
+
+}
+#h1_div{
+    margin: 15px;
+    border-radius: 35px;
+    border-color: blueviolet;
+    border-width: 20px;
+    background-color: plum;
 }

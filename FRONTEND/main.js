@@ -19,6 +19,9 @@ async function download()
         
     }
 }
+
+
+
 document.getElementById("send-btn").addEventListener("click", async () => {
     let inputs = document.querySelectorAll("#inputs input");
     let inputValues = [];
@@ -63,13 +66,13 @@ document.getElementById("send-btn").addEventListener("click", async () => {
     }
     let refword = result.refWord
     let refword_div = document.getElementById('refword')
-    let refword_p = document.createElement('h5')
+    let refword_p = document.createElement('h6')
     refword_p.textContent = "Az eredeti szó: " + refword
     refword_div.appendChild(refword_p)
     console.log(refword)
     let tipp = result.inputWord;
     let tipp_div = document.getElementById('tipp')
-    let tipp_p = document.createElement('h5')
+    let tipp_p = document.createElement('h6')
     tipp_p.textContent = "A tippelt szó: " + tipp;
     tipp_div.appendChild(tipp_p);
     let correct_div = document.getElementById('percentage');
