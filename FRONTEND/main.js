@@ -23,6 +23,10 @@ async function download()
 
 
 document.getElementById("send-btn").addEventListener("click", async () => {
+    document.getElementById('results').innerHTML = ''
+    document.getElementById('percentage').innerHTML = ''
+    document.getElementById('refword').innerHTML = ''
+    document.getElementById('tipp').innerHTML = ''
     let inputs = document.querySelectorAll("#inputs input");
     let inputValues = [];
 
